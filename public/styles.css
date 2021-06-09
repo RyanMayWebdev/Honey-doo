@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600&family=Raleway:wght@100&display=swap');
+
+body {
+    background-color: #0f88982b;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.btn {
+    background-color: #00bdb4;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 5px 10px;
+    padding: 7px 10px;
+}
+
+.brand {
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: #004946;
+    color: #00bdb4;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 400%;
+    font-weight: 600;
+    margin: 0;
+}
+
+.brandContainer {
+    margin-left: 5%;
+}
+
+h3,
+img {
+    display: inline-block;
+}
+
+h1 {
+    color: #00bdb4;
+    font-size: 3.5em;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.flexColumn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    width: 100%
+}
+
+.headerContainer {
+    background-image: linear-gradient(0deg, #ffd66a, #ffe193);
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    width: 100%;
+}
+
+input {
+    border: none;
+    margin: 25px 10px;
+    text-align: center;
+}
+
+input:focus-visible {
+    outline: none
+}
+
+input[type="text"] {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #00bdb4;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1px 20px;
+    scrollbar-color: #00bdb4 #b8e6eb00;
+    scrollbar-width: thin;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.listItems {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.listItemsContainer {
+    border-bottom: 1px solid black;
+    height: max-content;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+p {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: auto;
+    word-break: break-all;
+}
+
+.plannerContainer {
+    background-image: linear-gradient(-45deg, #40ecff, #b8e6eb 50%, #ffe193 10%, #ffd66a);
+    border-radius: 15px;
+    box-shadow: 0 0 10px #979797;
+    display: flex;
+    flex-grow: 0;
+    height: 80vh;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    max-width: 1440px;
+    width: 90%;
+}
+
+.round {
+    border: 1px solid #000;
+    border-radius: 50%;
+    outline: none;
+}
+
+.toDoList {
+    background-color: #ffffff4b;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #979797;
+    height: 90%;
+    margin: 20px;
+    width: 375px;
+    z-index: 1;
+}
+
+.weather {
+    height: 100%;
+}
+
+.weather h2 {
+    margin: 40px 5px 0;
+}
+
+.list::-webkit-scrollbar {
+    background-color: #b8e6eb00;
+    height: 100%;
+    width: 5px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #00bdb4;
+}
+
+@media (max-width: 525px) {
+    .list {
+        width: 250px;
+    }
+
+    .plannerContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 770px) {
+    .plannerContainer {
+        flex-direction: column;
+    }
+
+    .toDoList {
+        height: 35vh;
+        margin: 20px auto;
+        width: 90%;
+    }
+}
+
+@media (min-width: 770px) {
+    body {
+        height: 100vh;
+    }
+}

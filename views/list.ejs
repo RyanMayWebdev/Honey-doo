@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="headerContainer">
+        <div class="brandContainer">
+            <h2 class="brand">Honey-Doo<img src="/Images/melon.png"></h2>
+        </div>
+    </div>
+    <div class="flexColumn">
+        <div class="plannerContainer">
+
+            <div class="weather flexColumn">
+                <h1></h1>
+                <h2></h2>
+                <div>
+                    <img id="weatherImg" src="" alt="weather Icon">
+                    <h3 id="weatherTemp"></h3>
+                </div>
+            </div>
+
+            <div class="toDoList flexColumn">
+                <div class="list">
+                    <% newItem.forEach((item)=>{ %>
+                    <div class="listItemsContainer flexColumn">
+                        <div class="listItems"><input class="round" type="checkbox">
+                            <p><%= item.post %></p>
+                        </div>
+                        <form action="/remove" method="post">
+                            <button class="btn" name="button" value="<%= item._id %>"
+                                type="submit">X</button>
+                        </form>
+                    </div>
+                    <%  }) %>
+                </div>
+
+                <form action="/newItem" method="post">
+                    <input autocomplete="off" type="text" name="addItem" placeholder="New Item">
+                    <button class="btn" type="submit" name="submit">+</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
